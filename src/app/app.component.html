@@ -1,3 +1,10 @@
+<h1>*ngIf</h1>
+<p *ngIf="developer.name === 'Paul Realpe' && developer.age === 26; else elseBlock">My Content</p>
+<ng-template #elseBlock>
+  <p>Else content</p>
+</ng-template>
+<hr>
+
 <h1>NgModel</h1>
 <p>Name: {{ developer.name }}</p>
 <input type="text" placeholder="Name" required #nameInput="ngModel" [(ngModel)]="developer.name">
@@ -16,11 +23,13 @@
 <button [disabled]="btnDisabled">Send</button>
 <button (click)="toggleButton()" >{{ btnDisabled ? 'Enable button' : 'Disable button' }}</button>
 <div class="box" (scroll)="onScroll($event)">
-  <p>Cupidatat fugiat velit duis ut magna voluptate fugiat adipisicing consectetur Lorem. Adipisicing nisi sint voluptate irure aliquip. Ipsum duis cillum ipsum aliquip. Do est sit tempor consectetur ullamco nisi aute. Aute duis ullamco sunt sint culpa ipsum reprehenderit. Ea culpa sit qui nisi ut culpa labore reprehenderit. Elit anim in duis voluptate officia non quis velit officia laborum velit amet velit ex.
+  <p>
+    Cupidatat fugiat velit duis ut magna voluptate fugiat adipisicing consectetur Lorem. Adipisicing nisi sint voluptate irure aliquip. Ipsum duis cillum ipsum aliquip. Do est sit tempor consectetur ullamco nisi aute. Aute duis ullamco sunt sint culpa ipsum reprehenderit. Ea culpa sit qui nisi ut culpa labore reprehenderit. Elit anim in duis voluptate officia non quis velit officia laborum velit amet velit ex.
 
     Veniam aute sint exercitation deserunt culpa qui magna sint proident dolore tempor. Pariatur culpa reprehenderit officia labore et dolor amet nisi consectetur amet enim amet ullamco. Aliquip dolor qui ea consequat anim Lorem amet.
 
-    Sunt Lorem adipisicing pariatur laborum occaecat ullamco. Consectetur eu excepteur fugiat proident. Qui magna non elit ipsum velit do commodo anim aliqua exercitation et. Reprehenderit irure velit officia sint laboris mollit sint dolore minim ipsum. Exercitation excepteur deserunt ea adipisicing fugiat irure et consectetur labore.</p>
+    Sunt Lorem adipisicing pariatur laborum occaecat ullamco. Consectetur eu excepteur fugiat proident. Qui magna non elit ipsum velit do commodo anim aliqua exercitation et. Reprehenderit irure velit officia sint laboris mollit sint dolore minim ipsum. Exercitation excepteur deserunt ea adipisicing fugiat irure et consectetur labore.
+  </p>
 </div>
 <input type="text" placeholder="Name" (keyup)="changeName($event)">
 <hr>
