@@ -1,3 +1,34 @@
+<h1>*ngFor</h1>
+<ul>
+
+  <p>Emojis Keyboard, click to add</p>
+  <div class="emojiPicker">
+    <div class="emojisList">
+      <div class="emojiFrame" (click)="addEmoji($event)">😍</div>
+      <div class="emojiFrame" (click)="addEmoji($event)">😘</div>
+      <div class="emojiFrame" (click)="addEmoji($event)">🥸</div>
+      <div class="emojiFrame" (click)="addEmoji($event)">😈</div>
+      <div class="emojiFrame" (click)="addEmoji($event)">🤢</div>
+      <div class="emojiFrame" (click)="addEmoji($event)">👽</div>
+      <div class="emojiFrame" (click)="addEmoji($event)">🥺</div>
+      <div class="emojiFrame" (click)="addEmoji($event)">🥱</div>
+      <div class="emojiFrame" (click)="addEmoji($event)">🤑</div>
+      <div class="emojiFrame" (click)="addEmoji($event)">🙈</div>
+      <div class="emojiFrame" (click)="addEmoji($event)">🐶</div>
+      <div class="emojiFrame" (click)="addEmoji($event)">🐱</div>
+      <div class="emojiFrame" (click)="addEmoji($event)">🤓</div>
+      <div class="emojiFrame" (click)="addEmoji($event)">👩‍💻</div>
+    </div>
+  </div>
+  <p>Emojis list</p>
+  <li *ngFor="let item of emojis; index as i">
+    {{item}} : {{i + 1}}
+    <a class="emojiFrame" (click)="deleteEmoji(i)">❌​</a>
+  </li>
+
+</ul>
+<hr>
+
 <h1>*ngIf</h1>
 <p *ngIf="developer.name === 'Paul Realpe' && developer.age === 26; else elseBlock">My Content</p>
 <ng-template #elseBlock>

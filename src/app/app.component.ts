@@ -14,6 +14,8 @@ export class AppComponent {
     avatar: 'https://png.pngtree.com/png-vector/20190704/ourlarge/pngtree-businessman-user-avatar-free-vector-png-image_1538405.jpg'
   }
 
+  emojis: string[] = ['😂' , '🐦', '🐳','🌮', '💚'];
+
   toggleButton() {
     this.btnDisabled = !this.btnDisabled;
   }
@@ -26,5 +28,14 @@ export class AppComponent {
   changeName(event: Event) {
     const element: HTMLInputElement = event.target as HTMLInputElement;
     this.developer.name = element.value;
+  }
+
+  addEmoji(event: Event) {
+    const element: HTMLElement = event.target as HTMLElement;
+    this.emojis.push(element.textContent!);
+  }
+
+  deleteEmoji(index: number) {
+    this.emojis.splice(index, 1);
   }
 }
